@@ -1,6 +1,5 @@
 language: ruby
-rvm:
-- 2.0.0
+rvm: 2.0.0
 before_script:
 - npm install bower
 - bower install
@@ -14,3 +13,6 @@ deploy:
     secure: o3woNyvTnKWSLUYoHRN3APKEgpDPTrFqZoAcHQAbLPgNowIXEQ0xM2YjXJjzQZgFqwuXe0YT9jeB1qKl5kpr7YEvADpZ2/Nz+aYlzaIJjnf6MCJS5p1+rXmjpr1sQy9XTXLCkn96/Yz23UJDlonwqzQAGzJiALaIlSSHkVmFbaE=
   access_key_id:
     secure: hLKZUq0eIozb1QbMpQPSe6+yTFTGW+tYpDS1pANUX+DQtATd49Vk/FwaJ9LMJg/T8pMyIkda+tk0UGT78k8+8j+BYSMier8EORxiG2Z0NckQJNvU2cjXFV8tQJY8GEbIdr04s6rZXCAA0RFsac2nRBxnKgzxln/bxMgSc+PeALQ=
+  on:
+    branch: master
+    rvm: 2.0.0
