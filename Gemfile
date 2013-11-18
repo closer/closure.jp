@@ -17,4 +17,4 @@ platforms :mri_18 do
   gem "ruby18_source_location"
 end
 
-gem "middleman-sync", "~> 3.0.12"
+gem "middleman-s3_sync"

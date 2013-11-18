@@ -69,15 +69,16 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-# Activate sync extension
-activate :sync do |sync|
-  sync.fog_provider = 'AWS'
-  sync.fog_directory = 'closure.jp'
-  sync.fog_region = 'ap-northeast-1'
-  sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
-  sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-  sync.existing_remote_files = 'delete'
-  sync.gzip_compression = true
-  # sync.after_build = false # Disable sync to run after Middleman build ( defaults to true )
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'closure.jp'
+  s3_sync.region                     = 'ap-northeast-1'
+  s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
+  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
+  s3_sync.delete                     = false
+  s3_sync.after_build                = false
+  s3_sync.prefer_gzip                = true
+  s3_sync.path_style                 = true
+  s3_sync.reduced_redundancy_storage = false
+  s3_sync.acl                        = 'public-read'
+  s3_sync.encryption                 = false
 end
-
