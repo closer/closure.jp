@@ -72,7 +72,7 @@ end
 # Activate sync extension
 activate :sync do |sync|
   sync.fog_provider = 'AWS'
-  sync.fog_directory = 'closure.jo'
+  sync.fog_directory = 'closure.jp'
   sync.fog_region = 'ap-northeast-1'
   sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
   sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
